@@ -6,17 +6,14 @@ const result = document.getElementById("result");
 const choices = ["Rock", "Paper", "Scissors"];
 
 playBtn.addEventListener("click", () => {
-  rpsDiv.style.display = "block";
+  rpsDiv.style.display = "flex"; // ✅ set to flex to match your CSS intention
   playBtn.style.display = "none";
 
-  // Get all RPS buttons
   const rpsButtons = document.querySelectorAll(".rps");
-
-  // Add `.show` with a slight delay for each
   rpsButtons.forEach((btn, index) => {
     setTimeout(() => {
       btn.classList.add("show");
-    }, index * 300); // 300ms stagger
+    }, index * 300);
   });
 });
 

@@ -109,12 +109,11 @@ body{
     border-color: #ff00ff;
   }
 }
-.rpsButtons {
+#rpsButtons {
   display: flex;
-  flex-direction: row; /* side by side */
-  justify-content: center; /* center horizontally */
+  flex-direction: column;  /* ✅ stack children top to bottom */
+  justify-content: center;
   align-items: center;
   margin-top: 50px;
-  gap: 30px; /* spacing between buttons */
-  flex-wrap: wrap; /* wrap on small screens */
+  gap: 30px;  /* space between buttons and result */
 }
