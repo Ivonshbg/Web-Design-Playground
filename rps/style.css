@@ -1,0 +1,120 @@
+.header{
+    color: rgb(250, 250, 250);
+    text-align: center;
+    font-family: 'Orbitron', sans-serif;
+    text-shadow: 0cqi 0 10px rgba(252, 82, 252, 0.945);
+    text-decoration: underline solid rgb(0,0,0);
+    font-size: 50px;
+
+}
+body{
+    background-image: url("black_and_purple.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.absatzMaker{
+    color:rgb(250,250,250);
+    text-align:center;
+    font-family: 'Orbitron', sans-serif;
+    text-shadow: 0cqi 0 10px rgba(252, 82, 252, 0.945);
+    font-size: 25px;
+    padding-top: 80px;
+}
+.clicky {
+  display: block;
+  margin: 40px auto;
+  padding: 20px 60px;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 28px;
+  color: #fff;
+  background: rgba(200, 0, 255, 0.1);
+  border: 2px solid #f0f;
+  border-radius: 10px;
+  text-shadow: 0 0 10px #f0f;
+  box-shadow: 0 0 20px #f0f, 0 0 40px #f0f inset;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* Glow on hover */
+.clicky:hover {
+  background: rgba(200, 0, 255, 0.3);
+  box-shadow: 0 0 30px #f0f, 0 0 60px #f0f inset;
+  transform: scale(1.05);
+}
+@keyframes flicker {
+  0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+    opacity: 1;
+  }
+  20%, 22%, 24%, 55% {
+    opacity: 0.5;
+  }
+}
+
+.clicky:hover {
+  animation: flicker 1.5s infinite alternate;
+}
+.rps {
+  display: inline-block;
+  margin: 20px;
+  padding: 20px 50px;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 24px;
+  color: #fff;
+  background: transparent;
+  border: 2px solid #f0f;
+  border-radius: 8px;
+  cursor: pointer;
+  text-shadow: 0 0 10px #f0f;
+  box-shadow: 0 0 20px #f0f, inset 0 0 20px #f0f;
+  opacity: 0; /* start hidden */
+  
+  transform: translateY(50px); /* start off-screen below */
+  
+}
+
+/* Animate in when shown */
+.rps.show {
+  animation: flyIn 1s ease forwards, neonPulse 3s linear infinite alternate;
+}
+
+/* Fly in animation */
+@keyframes flyIn {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Neon RGB glow pulse */
+@keyframes neonPulse {
+  0% {
+    box-shadow: 0 0 20px #ff00ff, inset 0 0 20px #ff00ff;
+    border-color: #ff00ff;
+  }
+  33% {
+    box-shadow: 0 0 20px #00ffff, inset 0 0 20px #00ffff;
+    border-color: #00ffff;
+  }
+  66% {
+    box-shadow: 0 0 20px #ffff00, inset 0 0 20px #ffff00;
+    border-color: #ffff00;
+  }
+  100% {
+    box-shadow: 0 0 20px #ff00ff, inset 0 0 20px #ff00ff;
+    border-color: #ff00ff;
+  }
+}
+.rpsButtons {
+  display: flex;
+  flex-direction: row; /* side by side */
+  justify-content: center; /* center horizontally */
+  align-items: center;
+  margin-top: 50px;
+  gap: 30px; /* spacing between buttons */
+  flex-wrap: wrap; /* wrap on small screens */
+}

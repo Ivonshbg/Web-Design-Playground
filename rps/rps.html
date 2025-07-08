@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+  <title>RPS Game</title>
+</head>
+<body>
+  <h1 class="header">Hello, are you ready to play some classical Rock Paper Scissors game?</h1>
+  <p class="absatzMaker">Press "PLAY" to play!</p>
+
+  
+  <div>
+    <input type="button" id="playBtn" class="clicky" name="playbutton" value="PLAY">
+  </div>
+
+  <div id="rpsButtons" style="display: none;" class="rpsButtons">
+    <button class="rps" data-choice="Rock">Rock</button>
+    <button class="rps" data-choice="Paper">Paper</button>
+    <button class="rps" data-choice="Scissors">Scissors</button>
+    <br>
+    <p id="result" class="absatzMaker"> Result:</p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
