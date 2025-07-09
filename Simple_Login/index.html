@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <meta charset="UTF-8">
+        <link rel = "stylesheet" href = "styles.css">
+        <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+
+
+        <title>Index</title>
+
+    </head>
+    <body>
+        <h1>Welcome to homepage!</h1>
+        <h2>Please enter Username and Password to login:</h2>
+        <form id="loginForm" action="login.php" method="POST" >
+            <label for="username">Username:</label><br>
+            <input type="text" id="username" name="username" ><br><br>
+            <label for="password">Password:</label><br>
+            <input type="password" id="password" name="password" ><br><br>
+            <button type="submit">Login</button><button type="reset">Reset</button>
+        </form>
+        <p>Don't have an account? Register:<a href="register.php">HERE</a></p>
+        <p id = "errorMsg" style="color: red;"></p>
+
+        <script src = "checker.js"></script>
+
+    </body>
+  
+</html>
